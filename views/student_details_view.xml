@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- Student registration form view  (CTRL + / )-->
+<!--    <record id='student_r' model='ir.ui.view'>-->
+<!--        <field name="name">fleet.vehicle.form</field>-->
+<!--        <field name="model">fleet.vehicle</field>-->
+<!--        <field name="arch" type="xml">-->
+<!--            &lt;!&ndash;  Define your form view in here&ndash;&gt;-->
+<!--            -->
+<!--        </field>-->
+<!--    </record>-->
+</odoo>
