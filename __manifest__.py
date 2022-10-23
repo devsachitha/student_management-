@@ -11,7 +11,9 @@
         'base'
     ],
     'data': [
-
+        'security/ir.model.access.csv',
+        'data/sequences.xml',
+        'views/student_details_view.xml'
     ],
     'installable': True,
     'application': True,

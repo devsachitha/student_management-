@@ -1,12 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
     <!-- Student registration form view  (CTRL + / )-->
-<!--    <record id='student_r' model='ir.ui.view'>-->
-<!--        <field name="name">fleet.vehicle.form</field>-->
-<!--        <field name="model">fleet.vehicle</field>-->
-<!--        <field name="arch" type="xml">-->
-<!--            &lt;!&ndash;  Define your form view in here&ndash;&gt;-->
-<!--            -->
-<!--        </field>-->
-<!--    </record>-->
+    <record id='student_details_form_view' model='ir.ui.view'>
+        <field name="name">student.details.form</field>
+        <field name="model">student.details</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="first_name"/>
+                            <field name="last_name"/>
+                            <field name="name"/>
+                            <field name="age"/>
+                        </group>
+                        <group>
+                            <field name="registration_number"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Student Details tree view-->
+    <record id='student_details_tree_view' model='ir.ui.view'>
+        <field name="name">student.details.tree</field>
+        <field name="model">student.details</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="age"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Student Details action -->
+    <record id='student_details_action' model='ir.actions.act_window'>
+        <field name="name">Student Details</field>
+        <field name="res_model">student.details</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- manu items-->
+    <menuitem id="student_management_root_menu" name="Student Management"
+              web_icon="student_management-,static/description/icon.png" sequence="10">
+        <menuitem id="student_management_sub_menu" name="Student Management" sequence="1">
+            <menuitem id="student_details_sub_menu" name="Student Details" sequence="1"
+                      action="student_details_action"/>
+        </menuitem>
+    </menuitem>
+
+
 </odoo>
